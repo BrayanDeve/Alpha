@@ -15,6 +15,11 @@ Purpose:    Variáveis, reset, tipografia e componentes comuns (header/nav/foote
     --color-accent-light: #c9c9c9;
     --color-cream: #f5efe3;
     --color-muted: #a3a3a3;
+
+    --fs-xs: 0.8rem;
+    --fs-sm: 0.9rem;
+    --fs-md: 1.15rem;
+    --fs-lg: 1.25rem;
 }
 
 *,
@@ -165,7 +170,7 @@ input:focus-visible {
     text-decoration: none;
     color: var(--color-cream);
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: var(--fs-lg);
     letter-spacing: 0.5px;
 }
 
@@ -214,7 +219,7 @@ input:focus-visible {
     padding: 10px 14px;
     color: var(--color-cream);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--fs-sm);
     border-radius: 4px;
     transition: color 0.2s, background 0.2s;
 }
@@ -267,7 +272,7 @@ input:focus-visible {
     padding: 40px 0 24px;
     text-align: center;
     color: var(--color-muted);
-    font-size: 0.9rem;
+    font-size: var(--fs-sm);
 }
 
 .site-footer .brand {
