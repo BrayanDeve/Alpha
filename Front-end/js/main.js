@@ -37,7 +37,7 @@
         });
     });
 
-    var sections = document.querySelectorAll('main [id]');
+    var sections = document.querySelectorAll('main > section[id]');
     var menuItems = document.querySelectorAll('.main-menu .menu-item');
     var itemByHash = {};
 
