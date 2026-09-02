@@ -1,0 +1,308 @@
+/* ------------Author--------------------
+Site:       Alfa Barbearia
+CSS author: Brayan Linhar
+Updated:    01/09/2026
+Updated by: Brayan Linhar
+Escopo:     Estilos específicos da landing page (index.html)
+-------------------------------- */
+
+/* Hero */
+
+.hero {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: #000 url(../img/header.jpg) no-repeat center / cover;
+}
+
+.hero-overlay {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(13, 13, 13, 0.94) 0%, rgba(13, 13, 13, 0.72) 55%, rgba(13, 13, 13, 0.4) 100%);
+    padding: 60px 0;
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.hero-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.18);
+}
+
+.hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 0 16px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 0 0 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 0 0 20px;
+}
+
+.hero h1 span {
+    font-style: italic;
+}
+
+.hero-text {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    margin: 0 0 32px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 520px;
+    }
+}
+
+/* Serviços e diferenciais (grid compartilhado) */
+
+.services-grid,
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.about-grid {
+    text-align: center;
+}
+
+.service-icon {
+    color: var(--color-accent);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.service-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.service-card h3,
+.about-item h3 {
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.service-card p,
+.about-item p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin: 0 0 16px;
+}
+
+.service-card .price {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.service-card .duration {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.amenity-pill {
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent-light);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+}
+
+/* Ambiente */
+
+.ambiente img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .ambiente img {
+        height: 160px;
+    }
+}
+
+/* Avaliações */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 28px 24px;
+}
+
+.review-stars {
+    display: flex;
+    gap: 2px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.review-text {
+    color: var(--color-cream);
+    font-style: italic;
+    margin: 0 0 16px;
+}
+
+.review-author {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.review-author span {
+    color: var(--color-muted);
+}
+
+.reviews-cta {
+    text-align: center;
+}
+
+/* Contato */
+
+.contato-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: start;
+}
+
+.contato-info h3 {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+}
+
+.contato-info h3:not(:first-child) {
+    margin-top: 20px;
+}
+
+.contato-info p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.contato-info a {
+    color: var(--color-accent-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contato-info a:hover,
+.contato-info a:focus-visible {
+    color: var(--color-accent);
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.payment-pills {
+    justify-content: flex-start;
+    margin: 8px 0 0;
+}
+
+.contato-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.contato-map {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contato-map iframe {
+    display: block;
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .contato-card {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+        text-align: center;
+    }
+
+    .contato-actions {
+        align-items: center;
+    }
+
+    .contato-map iframe {
+        height: 240px;
+    }
+}
